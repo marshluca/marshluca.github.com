@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Git stash 隐藏代码更改"
+category: Tech
+tags: [Git]
+---
+
+
+
+当你不想提交当前完成了一半的代码，但是却不得不修改另一个紧急Bug，那么使用’git stash’就可以将你当前未提交到本地的代码推入到Git的栈中，这时候你的工作区间和上一次提交的内容是完全一样的，所以可以放心的修 Bug，等到修完Bug，提交到服务器上后，再使用’git stash apply’将以前的工作应用回来。
+
+当你多次使用’git stash’命令后，Git栈里将充满了未提交的代码，这时候你会对将哪个版本应用回来有些困惑，’git stash list’命令可以将当前的Git栈信息打印出来，你只需要将找到对应的版本号，例如使用’git stash apply stash@{1}’就可以将你指定版本号为stash@{1}的工作取出来，当你将所有的栈都应用回来的时候，可以使用’git stash clear’来将栈清空.
+
+	git stash
+	git stash apply stash@{1}
+	git stash list
+	git stash clear

@@ -1,0 +1,38 @@
+---
+layout: post
+title: Hello GAE
+category: Tech
+tags: [Python, GAE]
+---
+
+
+1.Required for windows
+
+    Python 2.5.x
+    GAE SDK 1.1.5
+
+2.create a directory named "helloworld" and create the files below in the directory.
+
+(1)app.yaml
+
+    application: marshluca
+    version: 1
+    runtime: python
+    api_version: 1
+
+    handlers:
+     -url: /.*
+     script: helloworld.py
+
+(2)helloworld.py
+
+    print 'Content-Type: text/plain'
+    print ''
+    print 'Hello, GAE and Hello Python!'
+
+3.deploy and start server
+
+    dev_appserver.py helloworld/
+    appcfg.py update helloworld/
+
+4.visit the url [http://marshluca.appspot.com](http://marshluca.appspot.com).
