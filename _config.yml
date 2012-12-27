@@ -1,0 +1,6 @@
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:day/:title
+name: The Road goes ever on and on
+markdown: rdiscount
+auto: true
