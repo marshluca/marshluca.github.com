@@ -26,15 +26,15 @@ Requirements:
 - Apache is listening on 8080 port
 - Nginx is running and listening on 80 port
 
-A good habit to add a nginx configuration is put it under /etc/nginx/sites-available and make a link to actviate it at /etc/nginx/sites/enable, here I use marshluca.com as example:
+A good habit to add a nginx configuration is put it under /etc/nginx/sites-available and make a link to actviate it at /etc/nginx/sites-enable, here I use example.com as example:
 
       upstream apache_php {
-        server marshluca.com:8080;
+        server example.com:8080;
       }
 
       server {
         listen 80;
-        server_name marshluca.com;
+        server_name example.com;
 
         location /blog {
           proxy_pass  http://apache_php;
@@ -54,15 +54,15 @@ A good habit to add a nginx configuration is put it under /etc/nginx/sites-avail
 
       server {
         listen 80;
-        server_name www.marshluca.com;
-        rewrite ^/(.*) http://marshluca.com/$1 permanent;
+        server_name www.example.com;
+        rewrite ^/(.*) http://example.com/$1 permanent;
       }
 
 As proxied backend, a VirtualHost configuration for Apache is required:
 
     <VirtualHost *:8080>
-      ServerName marshluca.com
-      ServerAlias www.marshluca.com
+      ServerName example.com
+      ServerAlias www.example.com
       DocumentRoot /var/www
       ErrorLog /var/www/blog/logs/error.log
       CustomLog /var/www/blog/logs/access.log combined
@@ -83,8 +83,8 @@ After the configuration, we need restart Nginx and Apache to make the changes wo
     sudo /etc/init.d/nginx restart
     sudo /etc/init.d/apache2 restart
 
-Now we can directly visit wordpress blog at http://marshluca.com.
+Now we can directly visit wordpress blog at http://example.com.
 
 
-About how to organize Rails app and Wordpress with different subdirectory under the same domain, I will cover it in my next blog.
+About how to organize Rails app and Wordpress with different subdirectory under the same domain, I will cover it in [my next blog](http://marshluca.com/2013/08/10/make-nginx-as-front-end-proxy-for-apache/).
 
