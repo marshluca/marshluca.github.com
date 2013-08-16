@@ -86,5 +86,5 @@ After the configuration, we need restart Nginx and Apache to make the changes wo
 Now we can directly visit wordpress blog at http://example.com.
 
 
-About how to organize Rails app and Wordpress with different subdirectory under the same domain, I will cover it in [my next blog](http://marshluca.com/2013/08/10/make-nginx-as-front-end-proxy-for-apache/).
+About how to organize Rails app and Wordpress with different subdirectory under the same domain, I will cover it in [my next blog](http://marshluca.com/2013/08/16/deploy-rails-app-with-nginx-in-subdirectory/).
 

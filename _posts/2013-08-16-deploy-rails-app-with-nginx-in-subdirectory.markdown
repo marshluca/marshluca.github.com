@@ -5,7 +5,7 @@ category: Tech
 tags: [Rails, Nginx]
 ---
 
-Follow [my previous post](http://marshluca.com/2013/08/05/how-to-change-a-scheduled-job-in-sidekiq/), this article will try to figure out how to organize
+Follow [my previous post](http://marshluca.com/2013/08/10/make-nginx-as-front-end-proxy-for-apache/), this article will try to figure out how to organize
 Rails app and Wordpress with different subdirectory under the same
 domain.
 
