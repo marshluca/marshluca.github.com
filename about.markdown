@@ -3,9 +3,9 @@ title: About
 layout: page
 ---
 
-I am Lin Zhang, a Ruby and Cocoa developer, who love Apple products, and also like to use Google services. Currently I live in  Beijing.
+I am Lucas Zhang, a web, iOS and blockchain developer.
 
-Email: marshluca@gmail.com
+Email: echo bWFyc2hsdWNhQGdtYWlsLmNvbQo=| base64 -D
 
 Twitter: [@marshluca](https://twitter.com/#!/marshluca)
 
